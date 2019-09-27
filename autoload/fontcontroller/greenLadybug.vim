@@ -29,15 +29,16 @@ function! s:getFontOptions()
   endif
   
   " 各設定地を確認
-  let s:FontController_Name = matchstr(s:nowGUIFont, '=¥zs[^:]*¥ze¥(:.*¥|¥)$')
-  let s:FontController_Highe = str2float(matchstr(s:nowGUIFont, ':h¥zs[^:]*¥ze¥(:.*¥|¥)$'))
-  let s:FontController_Width = str2float(matchstr(s:nowGUIFont, ':w¥zs[^:]*¥ze¥(:.*¥|¥)$'))
-  let s:FontController_Cherset = matchstr(s:nowGUIFont, ':c¥zs[^:]*¥ze¥(:.*¥|¥)$')
-  let s:FontController_Quality = matchstr(s:nowGUIFont, ':q¥zs[^:]*¥ze¥(:.*¥|¥)$')
-  let s:FontController_Bold = strlen(matchstr(s:nowGUIFont, ':¥zsb¥ze¥(:.*¥|¥)$'))
-  let s:FontController_Italic = strlen(matchstr(s:nowGUIFont, ':¥zsi¥ze¥(:.*¥|¥)$'))
-  let s:FontController_Under = strlen(matchstr(s:nowGUIFont, ':¥zsu¥ze¥(:.*¥|¥)$'))
-  let s:FontController_Strike = strlen(matchstr(s:nowGUIFont, ':¥zss¥ze¥(:.*¥|¥)$'))
+  let s:FontController_Name = matchstr(s:nowGUIFont, '=\zs[^:]*\ze\(:.*\|\)$')
+  let s:FontController_Name = matchstr(s:nowGUIFont, '=\zs[^:]*\ze\(:.*\|\)$')
+  let s:FontController_Highe = str2float(matchstr(s:nowGUIFont, ':h\zs[^:]*\ze\(:.*\|\)$'))
+  let s:FontController_Width = str2float(matchstr(s:nowGUIFont, ':w\zs[^:]*\ze\(:.*\|\)$'))
+  let s:FontController_Cherset = matchstr(s:nowGUIFont, ':c\zs[^:]*\ze\(:.*\|\)$')
+  let s:FontController_Quality = matchstr(s:nowGUIFont, ':q\zs[^:]*\ze\(:.*\|\)$')
+  let s:FontController_Bold = strlen(matchstr(s:nowGUIFont, ':\zsb\ze\(:.*\|\)$'))
+  let s:FontController_Italic = strlen(matchstr(s:nowGUIFont, ':\zsi\ze\(:.*\|\)$'))
+  let s:FontController_Under = strlen(matchstr(s:nowGUIFont, ':\zsu\ze\(:.*\|\)$'))
+  let s:FontController_Strike = strlen(matchstr(s:nowGUIFont, ':\zss\ze\(:.*\|\)$'))
 endfunction
 
 "----------------------------
