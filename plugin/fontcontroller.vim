@@ -1,12 +1,11 @@
 " ============================================================================
 " Filename: autoload/fontcontroller/greenLadybug.vim
 " Author: Fumiya Shibamata (@shibafumi)
-" Last Change: 27-Sep-2019.
+" Last Change: 28-Sep-2019.
 " ============================================================================
 
 command! -count=0 -nargs=0  FontControlSizeUp call fontcontroller#greenLadybug#setFontSizeUp()
 command! -count=0 -nargs=0  FontControlSizeDown call fontcontroller#greenLadybug#setFontSizeDown()
-command! -nargs=0           FontControlSetDefault call fontcontroller#greenLadybug#setDefaultFormat()
 command! -nargs=0           FontControlSetDefault call fontcontroller#greenLadybug#setDefaultFormat()
 
 function! s:setOptions(var, value)

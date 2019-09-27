@@ -1,7 +1,7 @@
 " =============================================================================
 " Filename: autoload/fontcontroller/greenLadybug.vim
 " Author: Fumiya Shibamata (@shibafumi)
-" Last Change: 27-Sep-2019.
+" Last Change: 28-Sep-2019.
 " =============================================================================
 
 if exists("g:loaded_fontcontroller_autoload")
@@ -162,6 +162,7 @@ function! fontcontroller#greenLadybug#setDefaultFormat()
   " 現在の設定値の取得
   call s:getFontOptions()
   
+  let s:FontController_Name = g:FontController_Name_Default
   let s:FontController_Cherset = g:FontController_Cherset_Default
   let s:FontController_Quality = g:FontController_Quality_Default
   let s:FontController_Highe = g:FontController_Highe_Default 
